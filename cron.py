@@ -1,6 +1,8 @@
-import requests
+
 import time
 import threading
+
+import requests
 
 
 def ping_site():

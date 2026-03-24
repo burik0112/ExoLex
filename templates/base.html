@@ -1,0 +1,35 @@
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoLex</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- NAVBAR (Hamma sahifada chiqadi) -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'img/1.jpg' %}" alt="">
+            <span>EcoLex</span>
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="{% url 'dictionary:home' %}">Bosh sahifa</a>
+                <a href="#">Xususiyatlar</a>
+            </div>
+            <a href="{% url 'dictionary:terms' %}" class="btn-green nav-btn">Terminlar</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ASOSIY MAZMUN (Shu yer o'zgaradi) -->
+{% block content %}
+{% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="terms-container">
+    <!-- Header qismi (Qidiruv maydoni bilan) -->
+    <header class="search-header">
+        <div class="container">
+            <h1>Iqtisodiy terminlar <br><span>lug‘ati</span></h1>
+            <p>2000 dan ortiq terminlarni o‘zbek, rus va ingliz tillarida toping.</p>
+
+            <form method="GET" action="{% url 'dictionary:terms' %}" class="search-form">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" name="search" placeholder="Terminni o‘zbekcha nomini yozing..."
+                           value="{{ request.GET.search }}">
+                </div>
+                <button type="submit" class="btn-search">Qidirish</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Natijalar qismi -->
+    <section class="results-section">
+        <div class="container">
+            {% if request.GET.search %}
+            <p class="search-query-text">"<span>{{ request.GET.search }}</span>" bo‘yicha qidiruv natijalari:</p>
+            {% endif %}
+
+            <div class="terms-grid">
+                {% for term in terms %}
+                <article class="term-card">
+                    <div class="term-header">
+                        <span class="category-tag">IQTISODIYOT</span>
+                        <div class="lang-badges">
+                            <span class="badge">UZ</span>
+                            <span class="badge">RU</span>
+                            <span class="badge">EN</span>
+                        </div>
+                    </div>
+
+                    <h2 class="term-title">{{ term.name_uz }}</h2>
+                    <p class="term-definition">{{ term.definition|truncatewords:25 }}</p>
+
+                    <div class="term-footer">
+                        <a href="{% url 'dictionary:term_detail' term.pk %}" class="read-more">
+                            Batafsil ko‘rish
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                {% empty %}
+                <!-- Topilmadi holati -->
+                <div class="not-found">
+                    <img src="{% static 'img/not-found.svg' %}" alt="Topilmadi">
+                    <h3>Hech qanday termin topilmadi</h3>
+                    <p>Boshqa so‘z bilan qidirib ko‘ring yoki xatolik yo‘qligini tekshiring.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

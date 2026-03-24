@@ -1,0 +1,105 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="h2" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="aiohappyeyeballs" />
+          <option value="aiohttp" />
+          <option value="aiohttp-retry" />
+          <option value="aiosignal" />
+          <option value="asgiref" />
+          <option value="async-timeout" />
+          <option value="attrs" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="coreapi" />
+          <option value="coreschema" />
+          <option value="dj-database-url" />
+          <option value="Django" />
+          <option value="django-ckeditor" />
+          <option value="django-cors-headers" />
+          <option value="django-debug-toolbar" />
+          <option value="django-filter" />
+          <option value="django-js-asset" />
+          <option value="django-model-utils" />
+          <option value="django-modeltranslation" />
+          <option value="django-phonenumber-field" />
+          <option value="django-twilio" />
+          <option value="djangorestframework" />
+          <option value="djangorestframework_simplejwt" />
+          <option value="drf-spectacular" />
+          <option value="drf-yasg" />
+          <option value="frozenlist" />
+          <option value="gunicorn" />
+          <option value="idna" />
+          <option value="inflection" />
+          <option value="itypes" />
+          <option value="Jinja2" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="MarkupSafe" />
+          <option value="multidict" />
+          <option value="packaging" />
+          <option value="phonenumbers" />
+          <option value="pillow" />
+          <option value="propcache" />
+          <option value="psycopg2-binary" />
+          <option value="PyJWT" />
+          <option value="pyTelegramBotAPI" />
+          <option value="python-dateutil" />
+          <option value="python-decouple" />
+          <option value="python-dotenv" />
+          <option value="pytz" />
+          <option value="PyYAML" />
+          <option value="referencing" />
+          <option value="requests" />
+          <option value="rpds-py" />
+          <option value="sentry-sdk" />
+          <option value="six" />
+          <option value="sqlparse" />
+          <option value="telebot" />
+          <option value="twilio" />
+          <option value="typing_extensions" />
+          <option value="tzdata" />
+          <option value="uritemplate" />
+          <option value="urllib3" />
+          <option value="whitenoise" />
+          <option value="yarl" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="djangorestframework" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.array" />
+          <option value="django.db.models.fields.FloatField.__mul__" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="ReassignedToPlainText" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

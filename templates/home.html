@@ -1,0 +1,69 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-wrapper">
+        <div class="hero-text">
+            <h1>Iqtisodiy terminlarni <br><span>oson tushuning</span></h1>
+            <p>EcoLex — iqtisodiy atamalarni o‘zbek, rus va ingliz tillarida tushuntirib beruvchi platforma.</p>
+            <a href="{% url 'dictionary:terms' %}" class="btn-green big">Terminlarni ko‘rish</a>
+        </div>
+        <div class="hero-img">
+            <img src="{% static 'img/hero.png' %}" class="main-illustration">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Nega aynan EcoLex?</h2>
+        <div class="cards">
+            <!-- 1-Card -->
+            <div class="card">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#0A66C2" stroke-width="2"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                          stroke="#0A66C2" stroke-width="2"/>
+                    <path d="M2 12h20" stroke="#0A66C2" stroke-width="2"/>
+                </svg>
+                <h3>3 tilda tushuntirish</h3>
+                <p>Atamalar uch tilda izohlanadi: o‘zbek, rus va ingliz</p>
+            </div>
+            <!-- 2-Card -->
+            <div class="card">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="#F1C40F" stroke-width="2"/>
+                    <path d="M20 20l-3-3" stroke="#F1C40F" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11 8v6M8 11h6" stroke="#F1C40F" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3>Qidiruv va obuna</h3>
+                <p>Tezkor qidiruv, sevimliarni belgilash va premium obuna xizmati</p>
+            </div>
+            <!-- 3-Card -->
+            <div class="card">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 10L12 5L2 10L12 15L22 10Z" fill="#0A66C2"/>
+                    <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" stroke="#0A66C2" stroke-width="2"/>
+                </svg>
+                <h3>Talabalar uchun</h3>
+                <p>Talabalar uchun qulay va oson tushunarli atamalar bazasi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+    <div class="container">
+        <h2>2000+ iqtisodiy terminlar bazasi</h2>
+        <p>EcoLex yordamida iqtisodiy bilimlarni kengaytiring</p>
+        <br>
+        <a href="{% url 'dictionary:terms' %}" class="btn-green big white-shadow">Terminlarni ko‘rish</a>
+    </div>
+    <div class="dot-pattern"></div>
+</section>
+{% endblock %}

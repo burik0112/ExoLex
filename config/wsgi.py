@@ -2,11 +2,11 @@ import os
 import sys
 
 # Loyiha yo'li
-path = '/home/burik0112/ExoLex'
+path = '/home/Burik/Exolex'
 if path not in sys.path:
     sys.path.append(path)
 
-# Settings fayli manzili. Loyiha papkang 'config' bo'lsa:
+# config - bu settings.py fayli turgan papka nomi
 os.environ['DJANGO_SETTINGS_MODULE'] = 'config.settings'
 
 from django.core.wsgi import get_wsgi_application

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-d+*#7bjm^z!dc(zm4u+64#&sz2$)*h2n)m#%xgzca^yd0vq3x0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Burik.pythonanywhere.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['burik.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
